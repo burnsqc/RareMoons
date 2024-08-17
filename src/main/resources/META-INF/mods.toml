@@ -9,7 +9,7 @@ license="All Rights Reserved"
     displayName="RareMoon"
     credits="Special thanks to the generous help of the Forge/NeoForge Discord community!"
     authors="burnsqc"
-    description='''RareMoon is a small mod for Minecraft that occasionally causes a rare moon type to appear, affecting gameplay for the night.'''
+    description='''RareMoon is a mod for Minecraft that occasionally causes a rare moon type to appear, affecting gameplay for the night.'''
 
 [[dependencies.raremoon]] 
     modId="forge" 
