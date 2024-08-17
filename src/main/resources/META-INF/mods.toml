@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+logoFile="raremoon.png"
+license="All Rights Reserved"
+
+[[mods]]
+    modId="raremoon"
+    version="1.0.0-alpha1"
+    displayName="RareMoon"
+    credits="Special thanks to the generous help of the Forge/NeoForge Discord community!"
+    authors="burnsqc"
+    description='''RareMoon is a small mod for Minecraft that occasionally causes a rare moon type to appear, affecting gameplay for the night.'''
+
+[[dependencies.raremoon]] 
+    modId="forge" 
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.raremoon]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
