@@ -15,6 +15,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraftforge.network.NetworkEvent;
 
 public class ClientboundPacketHandlers {
+
 	public static void handleSetMoonType(SetMoonTypePacket packet, final Supplier<NetworkEvent.Context> context) {
 		ClientLevelDataExtension data = new ClientLevelDataExtension();
 		data.setMoon(packet.getMoonType());

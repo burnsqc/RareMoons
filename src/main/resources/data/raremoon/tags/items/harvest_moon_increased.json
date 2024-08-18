@@ -1,0 +1,28 @@
+{
+  "values": [
+    "minecraft:wheat",
+    "minecraft:wheat_seeds",
+    "minecraft:carrot",
+    "minecraft:potato",
+    "minecraft:beetroot",
+    "minecraft:beetroot_seeds",
+    "minecraft:melon_seeds",
+    "minecraft:pumpkin_seeds",
+    "minecraft:torchflower_seeds",
+    "minecraft:cocoa_beans",
+    "minecraft:pitcher_pod",
+    "minecraft:apple",
+    "minecraft:sweet_berries",
+    "minecraft:glow_berries",
+    "minecraft:chorus_fruit",
+    "minecraft:beef",
+    "minecraft:porkchop",
+    "minecraft:mutton",
+    "minecraft:chicken",
+    "minecraft:rabbit",
+    "minecraft:cod",
+    "minecraft:salmon",
+    "minecraft:tropical_fish",
+    "minecraft:pffuerfish"
+  ]
+}

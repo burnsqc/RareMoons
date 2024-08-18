@@ -7,11 +7,11 @@ import javax.annotation.Nonnull;
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.raremoon.registration.dynamic.RareMoonItemTags;
 import com.raremoon.world.level.saveddata.RareMoonOverworldExtension;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
@@ -32,7 +32,7 @@ public class HarvestMoonLootModifier extends LootModifier {
 			RareMoonOverworldExtension data = RareMoonOverworldExtension.getData(context.getLevel().getServer());
 			if (data.getMoon() == 3) {
 				for (ItemStack loot : generatedLoot) {
-					if (loot.getItem() == Items.WHEAT || loot.getItem() == Items.WHEAT_SEEDS || loot.getItem() == Items.CARROT || loot.getItem() == Items.POTATO || loot.getItem() == Items.BEETROOT || loot.getItem() == Items.BEETROOT_SEEDS || loot.getItem() == Items.MELON_SEEDS || loot.getItem() == Items.PUMPKIN_SEEDS || loot.getItem() == Items.TORCHFLOWER_SEEDS || loot.getItem() == Items.COCOA_BEANS || loot.getItem() == Items.PITCHER_POD) {
+					if (loot.is(RareMoonItemTags.HARVEST_MOON_INCREASED)) {
 						loot.setCount(loot.getCount() * 2);
 					}
 				}

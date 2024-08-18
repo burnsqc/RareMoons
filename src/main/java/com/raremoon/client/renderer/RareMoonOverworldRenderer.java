@@ -67,7 +67,7 @@ public class RareMoonOverworldRenderer extends DimensionSpecialEffects implement
 					BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
 					RenderSystem.depthMask(false);
 
-					long time = minecraft.level.getDayTime() - 12000;
+					long time = minecraft.level.getDayTime() % 24000L - 12000;
 					float red = (ClientLevelDataExtension.getMoon() == 1) ? Mth.clamp(time < 12000 ? time / 4000F : -(time - 12000) / 4000F, 0.0F, 0.1F) : 0;
 					float yellow = (ClientLevelDataExtension.getMoon() == 2) ? Mth.clamp(time < 12000 ? time / 4000F : -(time - 12000) / 4000F, 0.0F, 0.1F) : 0;
 					float green = (ClientLevelDataExtension.getMoon() == 3) ? Mth.clamp(time < 12000 ? time / 4000F : -(time - 12000) / 4000F, 0.0F, 0.1F) : 0;
@@ -294,7 +294,7 @@ public class RareMoonOverworldRenderer extends DimensionSpecialEffects implement
 
 	@Override
 	public Vec3 getBrightnessDependentFogColor(Vec3 p_108908_, float p_108909_) {
-		long time = minecraft.level.getDayTime() - 12000;
+		long time = minecraft.level.getDayTime() % 24000L - 12000;
 		float red = (ClientLevelDataExtension.getMoon() == 1) ? Mth.clamp(time < 6000 ? time / 4000F : -(time - 12000) / 4000F, 0.0F, 0.1F) : 0;
 		float yellow = (ClientLevelDataExtension.getMoon() == 2) ? Mth.clamp(time < 6000 ? time / 4000F : -(time - 12000) / 4000F, 0.0F, 0.1F) : 0;
 		float green = (ClientLevelDataExtension.getMoon() == 3) ? Mth.clamp(time < 6000 ? time / 4000F : -(time - 12000) / 400F, 0.0F, 0.1F) : 0;

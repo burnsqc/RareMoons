@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @Mod.EventBusSubscriber(bus = EventBusSubscriber.Bus.FORGE)
-public class HarvestMoonListener {
+public class BlockEventListener {
 
 	@SubscribeEvent
 	public static void onCropGrowEventPre(final BlockEvent.CropGrowEvent.Pre event) {

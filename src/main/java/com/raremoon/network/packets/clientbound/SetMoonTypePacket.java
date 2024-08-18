@@ -10,8 +10,8 @@ import net.minecraftforge.network.NetworkEvent;
 public class SetMoonTypePacket {
 	private int moonType;
 
-	public SetMoonTypePacket(int moonTypeIn) {
-		moonType = moonTypeIn;
+	public SetMoonTypePacket(int moonType) {
+		this.moonType = moonType;
 	}
 
 	public static void encode(SetMoonTypePacket msg, FriendlyByteBuf buf) {
@@ -30,6 +30,6 @@ public class SetMoonTypePacket {
 	}
 
 	public int getMoonType() {
-		return moonType;
+		return this.moonType;
 	}
 }

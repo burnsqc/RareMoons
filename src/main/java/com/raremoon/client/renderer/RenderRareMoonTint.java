@@ -21,7 +21,7 @@ public class RenderRareMoonTint {
 			Minecraft minecraft = Minecraft.getInstance();
 
 			if (minecraft.level.dimensionTypeId() == BuiltinDimensionTypes.OVERWORLD) {
-				long time = minecraft.level.getDayTime() - 12000;
+				long time = minecraft.level.getDayTime() % 24000L - 12000;
 				if (ClientLevelDataExtension.getMoon() == 1) {
 					float green = Mth.clamp(time < 6000 ? -time / 1000F + 1 : (time - 12000) / 1000F + 1, 0.6F, 1.0F);
 					float blue = Mth.clamp(time < 6000 ? -time / 1000F + 1 : (time - 12000) / 1000F + 1, 0.6F, 1.0F);
