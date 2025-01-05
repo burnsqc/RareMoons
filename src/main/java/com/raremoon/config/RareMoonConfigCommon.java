@@ -1,4 +1,4 @@
-package com.raremoon.setup.common;
+package com.raremoon.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
@@ -26,7 +26,7 @@ public final class RareMoonConfigCommon {
 		BUILDER.comment("These settings have been set to defaults selected by the RareMoon development team.\n");
 
 		BUILDER.push("RARE MOON RARITY");
-		RARE_MOON_RARITY = BUILDER.comment("Percent chance of a rare moon appearance each night.").defineInRange("Rarity", 50, 0, 100);
+		RARE_MOON_RARITY = BUILDER.comment("Percent chance of a rare moon appearance each night.").defineInRange("Rarity", 20, 0, 100);
 		BUILDER.pop();
 
 		BUILDER.push("RARE MOON WEIGHT");

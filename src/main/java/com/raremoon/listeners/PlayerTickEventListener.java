@@ -3,8 +3,8 @@ package com.raremoon.listeners;
 import java.util.List;
 import java.util.Random;
 
+import com.raremoon.config.RareMoonConfigCommon;
 import com.raremoon.registration.dynamic.RareMoonMobEffectTags;
-import com.raremoon.setup.common.RareMoonConfigCommon;
 import com.raremoon.world.level.saveddata.RareMoonOverworldExtension;
 
 import net.minecraft.server.level.ServerPlayer;
@@ -24,7 +24,7 @@ public class PlayerTickEventListener {
 		if (event.player instanceof ServerPlayer) {
 			RareMoonOverworldExtension data = RareMoonOverworldExtension.getData(event.player.level().getServer());
 			if (data.getMoon() == 4) {
-				if (event.player.getActiveEffects().isEmpty() && event.player.level().getDayTime() % (RareMoonConfigCommon.BLUE_MOON_DURATION.get() * 20 + RareMoonConfigCommon.BLUE_MOON_COOLDOWN.get() * 20) == 0) {
+				if (!event.player.getAbilities().instabuild && !event.player.isSpectator() && event.player.getActiveEffects().isEmpty() && event.player.level().getGameTime() % (RareMoonConfigCommon.BLUE_MOON_DURATION.get() * 20 + RareMoonConfigCommon.BLUE_MOON_COOLDOWN.get() * 20) == 0) {
 					List<MobEffect> mobEffectsFiltered = ForgeRegistries.MOB_EFFECTS.getValues().stream().filter(effect -> ForgeRegistries.MOB_EFFECTS.tags().getTag(RareMoonMobEffectTags.BLUE_MOON_RANDOMIZED).contains(effect)).toList();
 					int random = new Random().nextInt(mobEffectsFiltered.size());
 					event.player.addEffect(new MobEffectInstance((MobEffect) mobEffectsFiltered.toArray()[random], RareMoonConfigCommon.BLUE_MOON_DURATION.get() * 20, 1));

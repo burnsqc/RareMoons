@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.raremoon.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"refmap": "raremoon.mixins.refmap.json",
+	"mixins": [
+		"MixinSkyColor"
+	],
+	"client": [	
+	],
+	"minVersion": "0.8"
+}

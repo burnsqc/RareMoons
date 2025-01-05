@@ -1,4 +1,4 @@
-package com.raremoon.setup.client;
+package com.raremoon.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;
@@ -9,6 +9,7 @@ public final class RareMoonConfigClient {
 	public static final ForgeConfigSpec CLIENT_SPEC;
 
 	public static final ForgeConfigSpec.ConfigValue<Boolean> RARE_MOON_NOTIFICATION;
+	public static final ForgeConfigSpec.ConfigValue<Integer> MOON_COLOR_CORRECTION;
 
 	static {
 		BUILDER.comment("RAREMOON CLIENT CONFIG\n");
@@ -19,6 +20,10 @@ public final class RareMoonConfigClient {
 
 		BUILDER.push("NOTIFICATIONS");
 		RARE_MOON_NOTIFICATION = BUILDER.comment("true - Display a message when a rare moon appears.\nfalse - Do not display a message when a rare moon appears.").define("Notifications", true);
+		BUILDER.pop();
+
+		BUILDER.push("COLOR CORRECTION");
+		MOON_COLOR_CORRECTION = BUILDER.comment("Color correction factor.  50 is intended for vanilla, but higher numbers might be better if using shaders.").defineInRange("Factor", 50, 0, 100);
 		BUILDER.pop();
 
 		CLIENT_SPEC = BUILDER.build();

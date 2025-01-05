@@ -1,6 +1,6 @@
 package com.raremoon.listeners;
 
-import com.raremoon.setup.common.RareMoonConfigCommon;
+import com.raremoon.config.RareMoonConfigCommon;
 import com.raremoon.world.level.saveddata.RareMoonOverworldExtension;
 
 import net.minecraft.server.level.ServerLevel;

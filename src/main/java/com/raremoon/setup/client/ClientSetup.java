@@ -1,5 +1,7 @@
 package com.raremoon.setup.client;
 
+import com.raremoon.config.RareMoonConfigClient;
+
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig.Type;
 
